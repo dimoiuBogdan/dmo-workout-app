@@ -12,7 +12,7 @@ const HomepageUserDashboard: FC<Partial<HomepageUserDashboardProps>> = ({
   workoutsSoFar,
 }) => {
   return (
-    <div className="flex items-center mb-4">
+    <div className="flex items-center mb-6">
       <img
         className="mr-3 rounded-full w-20 h-20 object-cover object-center"
         src="https://avatars.githubusercontent.com/u/27856891?v=4"

@@ -25,7 +25,7 @@ const Homepage = () => {
 
   return !isLoading ? (
     <div>
-      <h2 className="text-3xl mb-4">Homepage</h2>
+      <h2 className="text-3xl mb-6">Homepage</h2>
       <HomepageUserDashboard />
       <WorkoutHistoryChart />
       <MotivationalMusicCarousel />
