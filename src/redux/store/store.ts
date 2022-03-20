@@ -1,9 +1,11 @@
+import { themeReducer } from "./../reducers/themeReducer";
 import { loadingReducer } from "./../reducers/loadingReducer";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 // ...
 
 const reducers = {
   loadingReducer,
+  themeReducer,
 };
 
 const rootReducer = combineReducers(reducers);

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* MODIFY PRIME COMPONENTS */
+
+#popup_menu {
+  @apply shadow-lg border-2 rounded-md text-slate-700 text-lg;
+}
+
+.p-menuitem {
+  @apply my-3 px-3;
+}
+
+.p-menuitem-icon {
+  @apply mr-2 text-base;
+}

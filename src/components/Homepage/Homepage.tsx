@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LoadingActions } from "../../redux/reducers/loadingReducer";
 import { RootState } from "../../redux/store/store";
@@ -6,9 +6,10 @@ import HomepageUserDashboard from "../HomepageUserDashboard/HomepageUserDashboar
 import Loading from "../Loading/Loading";
 import MotivationalMusicCarousel from "../MotivationalMusicCarousel/MotivationalMusicCarousel";
 import MotivationalVideosCarousel from "../MotivationalVideosCarousel/MotivationalVideosCarousel";
+import PageHeader from "../PageHeader/PageHeader";
 import WorkoutHistoryChart from "../WorkoutHistoryChart/WorkoutHistoryChart";
 
-const Homepage = () => {
+const Homepage: FC<any> = () => {
   const dispatch = useDispatch();
 
   const isLoading = useSelector<RootState, boolean>(
@@ -25,7 +26,7 @@ const Homepage = () => {
 
   return !isLoading ? (
     <div>
-      <h2 className="text-3xl mb-6">Homepage</h2>
+      <PageHeader pageTitle="Homepage" />
       <HomepageUserDashboard />
       <WorkoutHistoryChart />
       <MotivationalMusicCarousel />
