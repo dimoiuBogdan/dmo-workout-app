@@ -5,7 +5,7 @@
 /* MODIFY PRIME COMPONENTS */
 
 #popup_menu {
-  @apply shadow-lg border-2 rounded-md text-slate-700 text-lg;
+  @apply shadow-lg border-2 rounded-md text-slate-700 text-lg bg-slate-100;
 }
 
 .p-menuitem {

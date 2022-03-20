@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/common/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import Workouts from "./components/Workouts/Workouts";
 

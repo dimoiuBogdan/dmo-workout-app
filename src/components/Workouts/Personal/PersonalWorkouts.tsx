@@ -1,5 +1,5 @@
-import AddWorkoutButtons from "./AddWorkoutButtons";
-import PersonalWorkoutCardsSection from "./PersonalWorkoutCardsSection";
+import AddWorkoutButtons from "../Add/AddWorkoutButtons";
+import PersonalWorkoutCardsSection from "../Add/PersonalWorkoutCardsSection";
 
 const PersonalWorkouts = () => {
   return (

@@ -1,5 +1,5 @@
-import { DUMMY_PERSONAL_WORKOUTS } from "../../utils/constants";
-import PersonalWorkoutCard from "./PersonalWorkoutCard";
+import { DUMMY_PERSONAL_WORKOUTS } from "../../../utils/constants";
+import PersonalWorkoutCard from "../Personal/PersonalWorkoutCard";
 
 const PersonalWorkoutCardsSection = () => {
   const SORTED_DUMMY_PERSONAL_WORKOUTS = DUMMY_PERSONAL_WORKOUTS.sort(

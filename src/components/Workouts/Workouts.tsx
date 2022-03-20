@@ -1,6 +1,6 @@
-import PageHeader from "../PageHeader/PageHeader";
-import PersonalWorkouts from "./PersonalWorkouts";
-import QuickAdd from "./QuickAdd";
+import PageHeader from "../common/PageHeader";
+import PersonalWorkouts from "./Personal/PersonalWorkouts";
+import QuickAdd from "./Add/QuickAdd";
 
 const Workouts = () => {
   return (
