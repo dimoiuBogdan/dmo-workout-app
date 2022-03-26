@@ -10,11 +10,12 @@ const PersonalWorkoutCardsSection = () => {
 
   return (
     <div>
-      {SORTED_DUMMY_PERSONAL_WORKOUTS.map((workout) => {
+      {SORTED_DUMMY_PERSONAL_WORKOUTS.map((workout, index) => {
         const { title, exercises, performedNumber } = workout;
 
         return (
           <PersonalWorkoutCard
+            key={index}
             title={title}
             exercises={exercises}
             performedNumber={performedNumber}

@@ -32,7 +32,6 @@ const PersonalWorkoutCard: FC<PersonalWorkoutCardProps> = ({
           aria-controls="popup_menu"
           aria-haspopup
           onClick={(event) => {
-            console.log(menu?.current);
             menu?.current?.toggle(event);
           }}
           className="fa-solid fa-ellipsis-vertical text-xl"
@@ -43,11 +42,11 @@ const PersonalWorkoutCard: FC<PersonalWorkoutCardProps> = ({
         Performed last 14 days : {performedNumber}
       </div>
       <div className="text-zinc-700">
-        {exercises?.map((exercise) => {
+        {exercises?.map((exercise, index) => {
           const { name, sets } = exercise;
 
           return (
-            <div className="mb-0.5">
+            <div key={index} className="mb-0.5">
               <i className="fa-solid fa-arrow-right text-xs mr-1.5"></i>
               {name} - {sets} sets
             </div>
