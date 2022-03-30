@@ -3,7 +3,7 @@ import "./Auth.css";
 
 const RegisterForm = () => {
   return (
-    <div>
+    <div className="pb-4">
       <Formik
         initialValues={{
           email: "",
@@ -44,11 +44,14 @@ const RegisterForm = () => {
           <Form>
             <div className="mb-3">
               <div className="mb-1">Full Name</div>
-              <Field
-                className="auth-field"
-                placeholder="Full name.."
-                name="fullName"
-              />
+              <div className="relative">
+                <Field
+                  className="auth-field"
+                  placeholder="Full name.."
+                  name="fullName"
+                />
+                <i className="fa-solid fa-user auth-field-icon"></i>
+              </div>
               <ErrorMessage
                 className="auth-field-error"
                 name="fullName"
@@ -57,12 +60,15 @@ const RegisterForm = () => {
             </div>
             <div className="mb-3">
               <div className="mb-1">Email</div>
-              <Field
-                className="auth-field"
-                type="email"
-                name="email"
-                placeholder="Email address.."
-              />
+              <div className="relative">
+                <Field
+                  className="auth-field"
+                  type="email"
+                  name="email"
+                  placeholder="Email address.."
+                />
+                <i className="fa-solid fa-at auth-field-icon"></i>
+              </div>
               <ErrorMessage
                 className="auth-field-error"
                 name="email"
@@ -71,12 +77,15 @@ const RegisterForm = () => {
             </div>
             <div className="mb-3">
               <div className="mb-1">Password</div>
-              <Field
-                className="auth-field"
-                placeholder="Password.."
-                type="password"
-                name="password"
-              />
+              <div className="relative">
+                <Field
+                  className="auth-field"
+                  placeholder="Password.."
+                  type="password"
+                  name="password"
+                />
+                <i className="fa-solid fa-lock auth-field-icon"></i>
+              </div>
               <ErrorMessage
                 className="auth-field-error"
                 name="password"
@@ -86,28 +95,34 @@ const RegisterForm = () => {
             <div className="mb-3 flex justify-between">
               <div className="w-[45%]">
                 <div className="mb-1">Weight</div>
-                <Field
-                  className="auth-field"
-                  placeholder="Weight.."
-                  type="number"
-                  name="weight"
-                />
+                <div className="relative">
+                  <Field
+                    className="auth-field"
+                    placeholder="Weight.."
+                    type="number"
+                    name="weight"
+                  />
+                  <i className="fa-solid fa-weight-scale auth-field-icon"></i>
+                </div>
               </div>
               <div className="w-[45%]">
                 <div className="mb-1">Height</div>
-                <Field
-                  className="auth-field"
-                  placeholder="Height.."
-                  type="number"
-                  name="height"
-                />
+                <div className="relative">
+                  <Field
+                    className="auth-field"
+                    placeholder="Height.."
+                    type="number"
+                    name="height"
+                  />
+                  <i className="fa-solid fa-arrows-up-down auth-field-icon"></i>
+                </div>
               </div>
             </div>
             <div className="w-full text-center">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-gradient-to-r shadow-md from-slate-600 rounded-xl to-slate-500 text-center relative top-7 w-3/4 py-1.5"
+                className="bg-gradient-to-r shadow-md from-slate-600 rounded-xl to-slate-500 text-center absolute -bottom-5 left-1/2 -translate-x-1/2 w-3/4 py-1.5"
               >
                 <span className="text-lg font-medium text-white">Register</span>
               </button>

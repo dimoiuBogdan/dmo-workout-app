@@ -1,7 +1,14 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useState } from "react";
 import "./Auth.css";
 
 const LoginForm = () => {
+  const [rememberAccount, setRememberAccount] = useState<boolean>(false);
+
+  const toggleRememberAccount = () => {
+    setRememberAccount((prev) => !prev);
+  };
+
   return (
     <div>
       <Formik
@@ -37,12 +44,15 @@ const LoginForm = () => {
           <Form>
             <div className="mb-3">
               <div className="mb-1">Email</div>
-              <Field
-                className="auth-field"
-                type="email"
-                name="email"
-                placeholder="Email address.."
-              />
+              <div className="relative">
+                <Field
+                  className="auth-field"
+                  type="email"
+                  name="email"
+                  placeholder="Email address.."
+                />
+                <i className="fa-solid fa-at auth-field-icon"></i>
+              </div>
               <ErrorMessage
                 className="auth-field-error"
                 name="email"
@@ -51,12 +61,15 @@ const LoginForm = () => {
             </div>
             <div className="mb-3">
               <div className="mb-1">Password</div>
-              <Field
-                className="auth-field"
-                placeholder="Password.."
-                type="password"
-                name="password"
-              />
+              <div className="relative">
+                <Field
+                  className="auth-field"
+                  placeholder="Password.."
+                  type="password"
+                  name="password"
+                />
+                <i className="fa-solid fa-lock auth-field-icon"></i>
+              </div>
               <ErrorMessage
                 className="auth-field-error"
                 name="password"
@@ -67,7 +80,7 @@ const LoginForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-gradient-to-r shadow-md from-slate-600 rounded-xl to-slate-500 text-center relative top-7 w-3/4 py-1.5"
+                className="bg-gradient-to-r shadow-md from-slate-600 rounded-xl to-slate-500 text-center absolute -bottom-5 left-1/2 -translate-x-1/2 w-3/4 py-1.5"
               >
                 <span className="text-lg font-medium text-white">Login</span>
               </button>
@@ -75,6 +88,15 @@ const LoginForm = () => {
           </Form>
         )}
       </Formik>
+      <div className="flex justify-between text-sm text-slate-300 pt-2 pb-6">
+        <div className="flex items-center" onClick={toggleRememberAccount}>
+          <div className="h-4 w-4 border-[1px] flex items-center justify-center border-slate-500 bg-slate-600 rounded-sm shadow-sm">
+            {rememberAccount && <i className="fa-solid fa-check"></i>}
+          </div>
+          <div className="ml-1">Remember account</div>
+        </div>
+        <div>Forgot password?</div>
+      </div>
     </div>
   );
 };

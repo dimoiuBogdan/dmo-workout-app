@@ -12,8 +12,8 @@ const FooterItem: FC<FooterItemProps> = ({ title, icon, pageUrl }) => {
     <NavLink
       className={({ isActive }) =>
         isActive
-          ? "bg-yellow-600 bg-opacity-20 text-center flex-1 py-1"
-          : "text-center flex-1 py-1"
+          ? "bg-slate-900 bg-opacity-30 text-center flex-1 py-0.5"
+          : "text-center flex-1 py-0.5"
       }
       to={pageUrl}
     >
@@ -25,7 +25,7 @@ const FooterItem: FC<FooterItemProps> = ({ title, icon, pageUrl }) => {
 
 const Footer = () => {
   return (
-    <div className="flex max-w-screen-md mx-auto justify-between fixed bottom-0 w-screen left-0 right-0 bg-slate-200 text-sm font-medium shadow-md bg-opacity-80 backdrop-blur-sm">
+    <div className="flex max-w-screen-md mx-auto justify-between fixed bottom-0 w-screen text-slate-200 left-0 right-0 bg-slate-500 text-xs font-medium shadow-md bg-opacity-80 backdrop-blur-sm">
       <FooterItem title="Home" icon="house" pageUrl="/" />
       <FooterItem title="Workouts" icon="dumbbell" pageUrl="/workouts" />
       <FooterItem title="Profile" icon="user" pageUrl="/profile" />
