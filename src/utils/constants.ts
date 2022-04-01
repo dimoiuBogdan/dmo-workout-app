@@ -90,3 +90,54 @@ export const DUMMY_PERSONAL_WORKOUTS = [
     performedNumber: 7,
   },
 ];
+
+export const DUMMY_WORKOUTS_DETAILS = [
+  {
+    workout: "Chest & Triceps",
+    date: new Date(),
+    exercises: [
+      {
+        exercise: "Bench Press",
+        sets: 4,
+        reps: [15, 12, 10, 8],
+        weight: [50, 70, 80, 90],
+      },
+      {
+        exercise: "Incline Press",
+        sets: 3,
+        reps: [12, 10, 8],
+        weight: [40, 55, 70],
+      },
+      {
+        exercise: "Dumbbell Flyes",
+        sets: 5,
+        reps: [12, 10, 8, 8, 8],
+        weight: [12, 14, 14, 14, 16],
+      },
+    ],
+  },
+  {
+    workout: "Back & Biceps",
+    date: new Date(),
+    exercises: [
+      {
+        exercise: "Deadlift",
+        sets: 4,
+        reps: [15, 12, 10, 8],
+        weight: [50, 70, 80, 90],
+      },
+      {
+        exercise: "Lat Pulldown Wide Grip",
+        sets: 3,
+        reps: [12, 10, 8],
+        weight: [40, 55, 70],
+      },
+      {
+        exercise: "Bar Row",
+        sets: 5,
+        reps: [12, 10, 8, 8, 8],
+        weight: [12, 14, 14, 14, 16],
+      },
+    ],
+  },
+];

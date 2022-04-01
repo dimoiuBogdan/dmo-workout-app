@@ -1,39 +1,17 @@
-import { FC, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { LoadingActions } from "../../redux/reducers/loadingReducer";
-import { RootState } from "../../redux/store/store";
-import HomepageUserDashboard from "./UserDashboard";
-import Loading from "../common/Loading";
-import MotivationalMusicCarousel from "./MotivationalMusicCarousel";
-import MotivationalVideosCarousel from "./MotivationalVideosCarousel";
-import PageHeader from "../common/PageHeader";
-import WorkoutHistoryChart from "./WorkoutHistoryChart";
+import HomepageHeader from "./UserWelcome";
+import HomepageSummary from "./WorkoutsHistory";
+import HomepageWorkoutDetails from "./WorkoutDetailsList";
 
-const Homepage: FC<any> = () => {
-  const dispatch = useDispatch();
-
-  const isLoading = useSelector<RootState, boolean>(
-    (state) => state.loadingReducer.loading
-  );
-
-  useEffect(() => {
-    dispatch(LoadingActions.setLoading(false));
-
-    return () => {
-      dispatch(LoadingActions.setLoading(true));
-    };
-  }, []);
-
-  return !isLoading ? (
+const Homepage = () => {
+  return (
     <div>
-      <PageHeader pageTitle="Homepage" />
-      <HomepageUserDashboard />
-      <WorkoutHistoryChart />
-      <MotivationalMusicCarousel />
-      <MotivationalVideosCarousel />
+      <HomepageHeader
+        image="https://media-exp1.licdn.com/dms/image/C5603AQE-kDPxKFhQwQ/profile-displayphoto-shrink_400_400/0/1626347346908?e=2147483647&v=beta&t=JFZqHF9SiyNcFVrZsnv94-uRDUAYah-R_r1PHN-cNM0"
+        name="Bobita"
+      />
+      <HomepageSummary />
+      <HomepageWorkoutDetails />
     </div>
-  ) : (
-    <Loading />
   );
 };
 

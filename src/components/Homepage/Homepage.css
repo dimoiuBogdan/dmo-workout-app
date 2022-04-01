@@ -1,0 +1,16 @@
+.timespan-dropdown .p-inputtext {
+  @apply px-1 py-0.5;
+}
+
+.timespan-dropdown {
+  @apply w-28;
+}
+
+.p-carousel-indicators {
+  @apply hidden;
+}
+
+.p-carousel-next,
+.p-carousel-prev {
+  @apply hidden;
+}
